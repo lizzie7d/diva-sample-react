@@ -9,11 +9,11 @@ a {
     position: relative;
 
     .nav-block {
-      display: block;
-      width: 130px;
-      height: 58px;
-      margin-top: 2px;
-      line-height: 62px;
+      display: inline-block;
+      width: 100px;
+      height: 34px;
+      margin-top: 0px;
+      line-height: 24px;
       text-align: center;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(8px);
@@ -45,4 +45,32 @@ a {
       background-color: rgba(0, 165, 255, 0.43) !important;
     }
   }
+}
+
+.visual_box {
+  height: 33.3%;
+}
+
+
+.visual_box .visual_title {
+  position: relative;
+  height: 35px;
+  margin: 5px 0;
+}
+
+.visual_box .visual_title span {
+  color: #fff;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.visual_box .visual_title img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.visual_box .visual_chart {
+  height: calc(100% - 35px);
 }

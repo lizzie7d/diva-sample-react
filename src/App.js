@@ -9,6 +9,10 @@ import Header from './components/Header';
 import Nan from './components/Nan';
 import Customize from './pages/Customize';
 import CodeView from './components/CodeView';
+import VisualLeft from './components/visual/visualLeft';
+import VisualTop from './components/visual/visualTop';
+import VisualRight from './components/visual/visualRight';
+import VisualMiddle from './components/visual/visualMiddle';
 
 // 通过懒加载导入各个模块
 const Scene = lazy(() => import('./pages/Scene'));
@@ -70,7 +74,7 @@ export default class App extends Component {
     this.backendContainer = React.createRef();
     const router = !this.state.isRouter ? null :
       <div>
-        <Redirect to="/scene"></Redirect>
+        {/* <Redirect to="/scene"></Redirect> */}
         <Route path="/scene" component={Scene} />
         <Route path="/video" component={Video} />
         <Route path="/global" component={Global} />
@@ -94,18 +98,24 @@ export default class App extends Component {
         <main className={this.state.exampleCode ? 'includeCodeArea' : null}>
           <BrowserRouter>
             <Suspense fallback={<div>Loading...</div>}>
-              <header>
-                <Header getExampleCode={(exampleCode) => this.setState({ exampleCode: exampleCode })} />
-              </header>
-              <article>
-                <nav>
+              <div style={{
+                margin: "10px 10px"
+              }}>
+                <div>
+                  <VisualRight />
+                </div>
+                <div>
+                  <VisualMiddle />
+                </div>
+                <div >
+                  <VisualLeft />
+                </div>
+                <div className="router" style={{ marginRight: 20 }}>
                   <Nan />
-                </nav>
-                <div className="router">
                   {router}
                 </div>
-                {codeArea}
-              </article>
+              </div>
+
             </Suspense>
           </BrowserRouter>
         </main>
