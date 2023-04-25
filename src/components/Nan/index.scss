@@ -8,33 +8,33 @@ a {
   .nav-list {
     position: relative;
 
-    .nav-block {
-      display: inline-block;
-      width: 100px;
-      height: 34px;
-      margin-top: 0px;
-      line-height: 24px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(8px);
-      color: #fff;
-      font-weight: 700;
+    // .nav-block {
+    //   display: inline-block;
+    //   width: 100px;
+    //   height: 34px;
+    //   margin-top: 0px;
+    //   line-height: 24px;
+    //   text-align: center;
+    //   background: rgba(255, 255, 255, 0.1);
+    //   backdrop-filter: blur(8px);
+    //   color: #fff;
+    //   font-weight: 700;
 
-      span {
-        backdrop-filter: unset;
-      }
+    //   span {
+    //     backdrop-filter: unset;
+    //   }
 
-      &:hover {
-        cursor: pointer;
-        background: rgba(38, 38, 38, 0.85);
-        color: #fff;
-      }
+    // &:hover {
+    //   cursor: pointer;
+    //   background: rgba(38, 38, 38, 0.85);
+    //   color: #fff;
+    // }
 
-      &:focus {
-        outline: none;
-        border: 0;
-      }
-    }
+    // &:focus {
+    //   outline: none;
+    //   border: 0;
+    // }
+    // }
   }
 
   .selected {

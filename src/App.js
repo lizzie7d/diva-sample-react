@@ -13,6 +13,10 @@ import VisualLeft from './components/visual/visualLeft';
 import VisualTop from './components/visual/visualTop';
 import VisualRight from './components/visual/visualRight';
 import VisualMiddle from './components/visual/visualMiddle';
+import LeftSide from './pages/leftSide';
+import Footer from './components/footer';
+import TopSide from './pages/TopSide';
+import RightSide from './pages/rightSide/rightSide';
 
 // 通过懒加载导入各个模块
 const Scene = lazy(() => import('./pages/Scene'));
@@ -102,24 +106,19 @@ export default class App extends Component {
                 margin: "10px 10px"
               }}>
                 <div>
-                  <VisualRight />
+                  {/* <LeftSide /> */}
+                  <Footer />
                 </div>
-                <div>
-                  <VisualMiddle />
-                </div>
-                <div >
-                  <VisualLeft />
-                </div>
-                <div className="router" style={{ marginRight: 20 }}>
-                  <Nan />
-                  {router}
+                <div className="router">
+                  {/* <Nan /> */}
+                  {/* {router} */}
                 </div>
               </div>
-
             </Suspense>
           </BrowserRouter>
         </main>
       </div>
+
     )
   }
 }

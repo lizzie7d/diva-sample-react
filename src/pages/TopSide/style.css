@@ -1,0 +1,21 @@
+.top-side {
+    pointer-events: all;
+    margin: 0 auto;
+    display: flex;
+    width: 600px;
+    flex-direction: row;
+    gap: 24px;
+    font-size: 18px;
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+.metro-section {
+    width: 200px;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    text-decoration: underline;
+    border-radius: 70px;
+    text-underline-offset: 0.4em;
+}

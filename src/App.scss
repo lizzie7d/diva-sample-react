@@ -41,13 +41,16 @@
         padding-right: 0;
         background: rgba(126, 92, 92, 0.1);
         backdrop-filter: blur(8px);
+
         ::-webkit-scrollbar {
           background-color: transparent;
           width: 14px;
         }
+
         ::-webkit-scrollbar-button {
           display: none;
         }
+
         ::-webkit-scrollbar-thumb {
           background: rgba(255, 255, 255, .3);
           background-clip: padding-box;
@@ -57,9 +60,10 @@
       }
     }
   }
+
   main.includeCodeArea {
     min-height: 1025px;
-   }
+  }
 }
 
 /* TODO: 设置分辨率时会产生白边  */

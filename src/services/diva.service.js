@@ -21,12 +21,11 @@ export class DivaService {
         container: element,
       });
     } else {
-      // 使用云渲染模式
       diva = new Diva({
         mode: 'cloud',
         apiKey: 'xxx',
         container: element,
-        url: new URL('ws://127.0.0.1:3000'),
+        url: new URL('ws://192.168.0.104:3000'),
         logType: 'resolved',
       });
     }

@@ -1,0 +1,24 @@
+.right-style {
+    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    right: 0;
+    top: 28%;
+    margin-right: 24px;
+}
+
+.right-title {
+    /* background-color: rgba(0, 0, 0, 0.45); */
+    width: 180px;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    border-radius: 70px;
+    /* border: 1px solid; */
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+
+    /* background-image: url(../../assets//asset//right-select.png); */
+}

@@ -15,38 +15,6 @@ export default class index extends Component {
     title: "测试路径02",
     index: 1
   },
-  {
-    title: "测试路径03",
-    index: 2
-  },
-  {
-    title: "测试路径04",
-    index: 3
-  },
-  {
-    title: "测试路径05",
-    index: 4
-  },
-  {
-    title: "测试路径06",
-    index: 5
-  },
-  {
-    title: "测试路径07",
-    index: 6
-  },
-  {
-    title: "测试路径08",
-    index: 7
-  },
-  {
-    title: "测试路径09",
-    index: 8
-  },
-  {
-    title: "测试路径10",
-    index: 9
-  },
   ];
 
   toggleVideo = async (video) => {
