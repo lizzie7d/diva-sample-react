@@ -10,12 +10,230 @@
     font-size: 16px;
 }
 
+.railway-top {
+    margin: 0 auto;
+    display: flex;
+    width: 600px;
+    flex-direction: row;
+    gap: 24px;
+    font-size: 18px;
+    font-size: 16px;
+}
+
 .metro-section {
     width: 200px;
     height: 51px;
     line-height: 51px;
     text-align: center;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     border-radius: 70px;
-    text-underline-offset: 0.4em;
+    /* text-underline-offset: 0.4em; */
+}
+
+.flex-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.intro-content {
+    height: 600px;
+    width: 1200px;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px;
+}
+
+.intro-display {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    ;
+}
+
+.intro-title {
+    font-size: 36px;
+    color: rgba(51, 51, 51, 1);
+    ;
+}
+
+.intro-detail {
+    font-size: 20px;
+    color: rgba(51, 51, 51, 1);
+    font-family: 'Source Han Sans';
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.intro-card {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+}
+
+.card-detail {
+    background-color: grey;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 600px;
+    padding: 40px;
+
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 284px;
+    height: 32px;
+    margin: 0 auto;
+}
+
+.card-intro {
+    margin-top: 24px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 20px;
+}
+
+.railway-page {
+    background-image: url(../../assets//asset//railway/底图.jpg);
+    height: 100vh;
+    /* padding-top: 16px; */
+    background-size: 100% 100% no-repeat;
+}
+
+.intro-title {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.intro-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.metro-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.metro-card {
+    width: 600px;
+    height: 211px;
+    text-align: center;
+}
+
+.metro-detial {
+    vertical-align: center;
+}
+
+.metro-left {
+    width: 600px;
+    height: 211px;
+}
+
+.intro-flex {
+    height: 600px;
+    width: 1200px;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px;
+    gap: 60px
+}
+
+.metro-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 400px;
+    /* top: 0; */
+    margin: auto;
+    bottom: 100px;
+}
+
+.main-three {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+}
+
+.main-pic {
+    width: 400px;
+    height: 180px;
+}
+
+.example-project {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.proleft {
+    width: 600px;
+    height: 200px;
+}
+
+.pro-img {
+    width: 600px;
+    height: 175px;
+}
+
+.pro-content {
+    height: 20px;
+    background-color: rgba(51, 51, 51, 1);
+    color: #fff;
+    text-align: center;
+}
+
+.main-display-three {
+    width: 1200px;
+}
+
+.logo-style {
+    height: 100%;
+    width: 100%;
+}
+
+.logo-position {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.logo-top-style {
+    height: 80%;
+    width: 100%;
 }

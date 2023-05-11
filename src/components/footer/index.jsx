@@ -14,20 +14,26 @@ import lightGoal from '../../assets/asset/lightGoal.png';
 import lightHome from '../../assets/asset/lightHome.png';
 import lightBook from '../../assets/asset/lightBook.png';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { data, diva } from '../../global';
 import LeftSide from '../../pages/leftSide';
 import TopSide from '../../pages/TopSide';
 import RightSide from '../../pages/rightSide/rightSide';
-import buttomPic from '../../assets/asset/buttom-pic.png';
+import footerSelect from '../../assets/asset/footer-select.png';
+import VideoPart from '../../pages/videoPart';
+import menu from '../../assets/asset/railway/menu.png'
+import MetroTitle from '../../pages/TopSide/metroTitle';
+import RoomTour from '../../pages/roomTour/roomTour';
+import logo from '../../assets/asset/logo.png';
+
 const Footer = () => {
     const switchScene = (scene) => {
-        diva.client.applyScene(scene).then(() => {
-            data.changeCode(`client.applyScene('${scene.title}')`);
-        });
+        console.log(scene, "山脉城杨");
+        if (scene !== 3) {
+            diva.client.applyScene(scene).then(() => {
+            });
+        }
     }
-    const titleName = [{ title: '广州地铁', index: 0 }, { title: '山脉城央', index: 3 }, { title: '云山圈层', index: 0 }, { title: '城市TOD', index: 1 }, { title: '汇聚繁华', index: 4 }, { title: '和美山居', index: 6 }, { title: '东方美学', index: 7 }];
-    const titleEnglish = ['Guangzhou Metro', 'Metro Brand', 'Age White Clouds', 'City TOD', 'Converging prosperity', 'Harmony and Beauty', 'Beauty of the East'];
+    const titleName = [{ title: '广州地铁', index: 0 }, { title: '山脉城央', index: 15 }, { title: '云山圈层', index: 0 }, { title: '城市TOD', index: 1 }, { title: '汇聚繁华', index: 4 }, { title: '和美山居', index: 6 }, { title: '东方美学', index: 7 }];
     const unSelectPicSrc = [road, music, posi, spider, goal, home, book];
     const selectPic = [lightTrain, lightMusic, lightPosi, lightSpider, lightGoal, lightHome, lightBook];
     const [selectIndex, setSelectIndex] = useState(0);
@@ -40,32 +46,33 @@ const Footer = () => {
         diva.client?.applyScene("半鸟瞰").then(() => {
             data.changeCode(`client.applyScene('半鸟瞰')`);
         });
-    })
+    });
+
+
     return (
         <div className="footer">
+            {/* <Cloud /> */}
+
             {selectIndex === 3 && (<TopSide />)}
+            {selectIndex === 0 && (<MetroTitle />)}
             {selectIndex === 2 && (<LeftSide />)}
             {selectIndex === 4 && (<RightSide />)}
+            {selectIndex === 1 && (<VideoPart />)}
+            {selectIndex === 5 && (<RoomTour />)}
 
             <div className='footer-container'>
+                <img src={menu} />
                 <div className="flex-menu" >
                     {titleName.map((item, index) => (
                         <div key={item.index} className="single-section" onClick={() => { setSelectIndex(index); switchScene(item.index); }}>
-                            <div className='pic-position'>
-                                <img className='pic-src' src={selectIndex === index ? selectPic[index] : unSelectPicSrc[index]} />
-                            </div>
+                            {selectIndex === index && (<img className='section-pic' src={footerSelect} />)}
                             <div className='title-position' style={{ color: selectIndex === index ? 'rgb(255, 255, 255)' : 'rgba(255, 255, 255, 0.7)' }}>
-                                <div className='fs-16'>{item.title}</div>
-                                <div>{titleEnglish[index]}</div>
-
+                                <img style={{ marginRight: 6 }} className='pic-src' src={selectIndex === index ? selectPic[index] : unSelectPicSrc[index]} />
+                                <span> {item.title}</span>
                             </div>
-
                         </div>))}
                 </div>
-                {/* <img style={{
-                    width: 86,
-                    height: 18
-                }} src={buttomPic} /> */}
+
             </div >
         </div>
 

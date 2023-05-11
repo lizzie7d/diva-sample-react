@@ -17,8 +17,11 @@
     text-align: center;
     border-radius: 70px;
     /* border: 1px solid; */
-    text-decoration: underline;
-    text-underline-offset: 0.4em;
 
     /* background-image: url(../../assets//asset//right-select.png); */
+}
+
+.font-line-style {
+    width: 102px;
+    margin-left: 10px;
 }

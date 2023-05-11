@@ -3,16 +3,32 @@
     width: 392px;
     padding: 24px;
     background-color: #000;
-    opacity: 0.6;
+    opacity: 0.75;
     position: absolute;
     left: 0px;
-    top: 0px;
+    bottom: 15%;
     margin-top: 100px;
     margin-left: 24px;
     display: flex;
     flex-direction: column;
     color: #FFFFFF;
 
+}
+
+.room-detail-box {
+    height: 563px;
+    width: 360px;
+    padding: 24px;
+    background-color: #000;
+    opacity: 0.75;
+    position: absolute;
+    left: 0px;
+    bottom: 22%;
+    margin-top: 80px;
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
 }
 
 .left-title {
@@ -32,4 +48,71 @@
 
 .left-buttom {
     margin-top: 16px;
+}
+
+.three-part {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.room-size {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.company-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.size-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 6px;
+}
+
+.window-contain {
+    position: relative;
+}
+
+.window-basic {
+    background-image: url(../../assets/asset/basepic.png);
+    height: 530px;
+    width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -350px;
+    /* opacity: 0.7;/ */
+    display: flex;
+    flex-direction: row;
+    padding: 82px 22px;
+    color: #fff;
+    gap: 100px
+}
+
+.room-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.close-detail {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.enter-style {
+    width: 282px;
+    height: 56px;
+    position: absolute;
+    right: 10px;
+    bottom: 5%;
+    text-align: center;
 }

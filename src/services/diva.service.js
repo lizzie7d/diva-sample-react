@@ -25,7 +25,7 @@ export class DivaService {
         mode: 'cloud',
         apiKey: 'xxx',
         container: element,
-        url: new URL('ws://192.168.0.104:3000'),
+        url: new URL('ws://192.168.0.108:3000'),
         logType: 'resolved',
       });
     }

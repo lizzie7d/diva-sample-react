@@ -17,6 +17,8 @@ import LeftSide from './pages/leftSide';
 import Footer from './components/footer';
 import TopSide from './pages/TopSide';
 import RightSide from './pages/rightSide/rightSide';
+import RailWay from './pages/RailwayStation';
+import Cloud from './pages/cloud';
 
 // 通过懒加载导入各个模块
 const Scene = lazy(() => import('./pages/Scene'));
@@ -99,14 +101,14 @@ export default class App extends Component {
     return (
       <div className="win">
         <div id="backendContainer" ref={this.backendContainer} className="backend-container"></div>
-        <main className={this.state.exampleCode ? 'includeCodeArea' : null}>
+        <main >
           <BrowserRouter>
-            <Suspense fallback={<div>Loading...</div>}>
+
+            <Suspense >
               <div style={{
-                margin: "10px 10px"
+                // margin: "10px 10px"
               }}>
                 <div>
-                  {/* <LeftSide /> */}
                   <Footer />
                 </div>
                 <div className="router">
