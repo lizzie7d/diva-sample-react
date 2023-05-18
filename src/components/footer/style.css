@@ -45,7 +45,7 @@
 .footer-container {
     position: absolute;
     bottom: 0;
-    width: 1242px;
+    width: 1128px;
     /* margin: 0 auto; */
     background-image: url('../../assets/asset/footer.png');
     background-size: 100% 100%;
@@ -57,7 +57,7 @@
     /* top: 0; */
     margin: auto;
     bottom: 20px;
-    padding: 8px 0px 16px 0px;
+    padding: 4px 0px 13px 0px;
 }
 
 .fs-16 {
@@ -68,8 +68,8 @@
 .edu-title {
     /* background-color: rgba(0, 0, 0, 0.45); */
     width: 130px;
-    height: 51px;
-    line-height: 51px;
+    height: 38px;
+    line-height: 38px;
     text-align: center;
     border-radius: 70px;
 
@@ -78,11 +78,11 @@
 .education {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 24px;
     position: absolute;
     left: 0;
     right: 0;
-    width: 400px;
+    width: 386px;
     /* top: 0; */
     margin: auto;
     bottom: 100px;

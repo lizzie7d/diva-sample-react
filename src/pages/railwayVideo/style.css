@@ -1,0 +1,14 @@
+.railway-video {
+    pointer-events: all;
+    background-color: grey;
+    height: 600px;
+    width: 500px;
+    position: absolute;
+    top: 20%;
+    left: 20px;
+}
+
+.railway-video>video {
+    position: initial;
+
+}

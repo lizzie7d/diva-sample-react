@@ -2,7 +2,7 @@
     pointer-events: all;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 24px;
     position: fixed;
     right: 0;
     top: 28%;
@@ -10,18 +10,14 @@
 }
 
 .right-title {
-    /* background-color: rgba(0, 0, 0, 0.45); */
-    width: 180px;
-    height: 51px;
-    line-height: 51px;
+    width: 122px;
+    height: 38px;
+    line-height: 38px;
     text-align: center;
     border-radius: 70px;
-    /* border: 1px solid; */
-
-    /* background-image: url(../../assets//asset//right-select.png); */
 }
 
 .font-line-style {
-    width: 102px;
+    width: 72px;
     margin-left: 10px;
 }

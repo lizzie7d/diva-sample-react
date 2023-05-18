@@ -24,6 +24,7 @@ import menu from '../../assets/asset/railway/menu.png'
 import MetroTitle from '../../pages/TopSide/metroTitle';
 import RoomTour from '../../pages/roomTour/roomTour';
 import logo from '../../assets/asset/logo.png';
+import WestBeauty from '../../pages/ChineBeauty';
 
 const Footer = () => {
     const switchScene = (scene) => {
@@ -59,8 +60,14 @@ const Footer = () => {
             {selectIndex === 4 && (<RightSide />)}
             {selectIndex === 1 && (<VideoPart />)}
             {selectIndex === 5 && (<RoomTour />)}
+            {selectIndex === 6 && (<WestBeauty />)}
+
 
             <div className='footer-container'>
+                {/* <div className='logo-position'>
+                    <img className='logo-top-style' src={logo} />
+
+                </div> */}
                 <img src={menu} />
                 <div className="flex-menu" >
                     {titleName.map((item, index) => (

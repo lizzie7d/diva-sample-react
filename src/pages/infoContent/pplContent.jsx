@@ -7,6 +7,8 @@ import pic7 from '../../assets/asset/railway/pic7.png';
 import pic8 from '../../assets/asset/railway/pic8.png';
 import pic9 from '../../assets/asset/railway/pic9.png';
 import { useEffect, useRef, useState } from 'react';
+import logo from '../../assets/asset/logo.png';
+
 const PplContent = () => {
     const videoRef = useRef();
     const [pause, setPause] = useState(true);
@@ -22,6 +24,10 @@ const PplContent = () => {
     })
     return (
         <div>
+            <div>
+                <img className='logo-style' src={logo} />
+
+            </div>
             <video ref={videoRef} src="https://video.picbling.cn/zzz_20230510_348606_2be3f13c-5076-4201-9ec0-485c6984071f-1080.mp4" controls></video>
 
             <div className="leftside-contain" style={{ height: 640, visibility: !pause ? 'hidden' : 'unset' }}>

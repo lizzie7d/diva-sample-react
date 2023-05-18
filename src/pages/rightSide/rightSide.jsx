@@ -73,7 +73,7 @@ const RightSide = () => {
                             color: eduIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
                         }}>
                         {item.title}
-                        <div style={{ marginTop: '-40px' }}><img className='font-line-style' src={fontLine} /></div>
+                        <div style={{ marginTop: '-32px' }}><img className='font-line-style' src={fontLine} /></div>
 
 
                     </div>))}
@@ -88,7 +88,7 @@ const RightSide = () => {
                             color: trafficIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
                         }}>
                         {item.title}
-                        <img className='font-line-style' src={fontLine} />
+                        <div style={{ marginTop: '-32px' }}><img style={{ width: 72 }} src={fontLine} /></div>
 
                     </div>))}
             </div>}
@@ -101,7 +101,7 @@ const RightSide = () => {
                         color: selectIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
                     }}
                 >{item.title}
-                    <div style={{ marginTop: '-40px' }}><img src={fontLine} /></div>
+                    <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
                 </div>))}
             </div>
         </div>

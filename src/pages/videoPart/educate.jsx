@@ -11,6 +11,7 @@ const Education = () => {
 
     return (
         <div>
+
             {buttomIndex === 0 && (<InfoContent />)}
             {buttomIndex === 1 && (<PplContent />)}
 
@@ -25,7 +26,7 @@ const Education = () => {
                             color: buttomIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
                         }}>
                         {item}
-                        <div style={{ marginTop: '-40px' }}><img src={fontLine} /></div>
+                        <div style={{ marginTop: '-32px' }}><img style={{ width: 80 }} src={fontLine} /></div>
 
                     </div>))}
             </div>

@@ -5,8 +5,11 @@ import select from '../../assets/asset/right-select.png';
 import unselected from '../../assets/asset/right-unselected.png';
 import fontLine from '../../assets/asset/font-line.png';
 import logo from '../../assets/asset/logo.png';
+import closeDetail from '../../assets/asset/closeIcon.png';
+import RailwayVideo from '../railwayVideo';
 
 const TopSide = () => {
+    const [visible, setVisible] = useState(false);
     const [selectIndex, setSelectIndex] = useState(0);
     const switchScene = (scene) => {
         diva.client.applyScene(scene).then(() => {
@@ -45,11 +48,11 @@ const TopSide = () => {
 
     const onClickTheTitle = (index, item) => {
         if (index === 3) {
-            explore()
+            explore();
+            setVisible(true);
         }
         if (index === 2) {
-            console.log(123);
-            close()
+            close();
         }
         setSelectIndex(index);
         switchScene(item);
@@ -58,7 +61,14 @@ const TopSide = () => {
     const metroTitle = [{ title: '道路交通', index: 1 }, { title: '轨道交通', index: 2 }, { title: ['双TOD上盖', '内部结构'], index: 3 },];
     return (
         <div>
+            {visible && (<div className="railway-video">
+                <img src={closeDetail} onClick={() => { setVisible(false) }} className='close-detail' />
+                <video style={{ width: 500, height: 500, marginTop: 50 }} loop src="https://video.picbling.cn/zzz_20230516_348606_c8855ad5-284d-4d36-90c5-6fc6fdb79955-1080.mp4" autoPlay />
+            </div>)}
+            <div>
+                <img className='logo-style' src={logo} />
 
+            </div>
             <div className="top-side">
                 {metroTitle.map((item, index) => (
                     <div
@@ -70,15 +80,17 @@ const TopSide = () => {
                         }}>
                         {item.title.length !== 2 ?
                             <div >{item.title}
-                                <div style={{ marginTop: '-40px' }}><img src={fontLine} /></div>
+                                <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
                             </div> : (
                                 <div className='flex-title'>
                                     <div>{item.title[0]}
-                                        <div style={{ marginTop: '-40px' }}><img src={fontLine} /></div>
+                                        <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
                                     </div>
                                     {selectIndex === 2 && (<div
                                         onClick={() => onClickTheTitle(3, item.index)}
                                         style={{
+                                            borderRadius: 70,
+                                            height: 38,
                                             fontSize: 14,
                                             opacity: 0.7,
                                             // width
@@ -86,7 +98,7 @@ const TopSide = () => {
                                             color: selectIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)',
                                             backgroundRepeat: 'no-repeat'
                                         }}>{item.title[1]}
-                                        <div style={{ marginTop: '-40px' }}><img src={fontLine} /></div>
+                                        <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
 
                                     </div>)}
                                 </div>
@@ -94,10 +106,7 @@ const TopSide = () => {
                     </div>))}
 
             </div>
-            <div className='logo-position'>
-                <img className='logo-top-style' src={logo} />
 
-            </div>
         </div>
 
 

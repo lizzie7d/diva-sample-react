@@ -18,7 +18,7 @@ const VideoPart = () => {
             {/* {selectIndex === 0 && <Education />} */}
             {selectIndex === 1 && (< Cloud />)}
 
-            <div className="top-side" style={{ width: 378 }}>
+            <div className="top-side" style={{ width: 270 }}>
                 {topTitle.map((item, index) => (
                     <div
                         onClick={() => setSelectIndex(index)}
@@ -28,7 +28,7 @@ const VideoPart = () => {
                             color: selectIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
                         }}>
                         {item}
-                        <div style={{ marginTop: '-40px' }}><img src={fontLine} /></div>
+                        <div style={{ marginTop: '-32px' }}><img style={{ width: 80 }} src={fontLine} /></div>
 
                     </div>))}
 

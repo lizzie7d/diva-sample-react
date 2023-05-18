@@ -15,7 +15,8 @@ import unselected from '../../assets/asset/right-unselected.png';
 import select from '../../assets/asset/right-select.png';
 import fontLine from '../../assets/asset/font-line.png';
 import PplContent from './pplContent';
-import { ControlBar, PlayToggle, Player } from 'video-react';
+import logo from '../../assets/asset/logo.png';
+
 const InfoContent = () => {
     const videoRef = useRef();
     const [pause, setPause] = useState(true);
@@ -33,14 +34,17 @@ const InfoContent = () => {
     })
     return (
         <div >
+            <div>
+                <img className='logo-style' src={logo} />
 
+            </div>
             <video controls src="https://video.picbling.cn/zzz_20230510_348606_854e7b76-0ec5-40c7-b06c-58b700f644a0-1080.mp4"
                 ref={videoRef}
             ></video>
             {/* <Education /> */}
             {buttomIndex === 1 && (< PplContent />)}
 
-            <div className="education" style={{ width: 378, fontSize: 16, }}>
+            <div className="education" style={{ width: 270, fontSize: 16, }}>
                 {buttomTitle.map((item, index) => (
                     <div
                         onClick={() => { setButtomIndex(index) }}
@@ -51,7 +55,7 @@ const InfoContent = () => {
                             color: buttomIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
                         }}>
                         {item}
-                        <div style={{ marginTop: '-40px' }}><img src={fontLine} /></div>
+                        <div style={{ marginTop: '-32px' }}><img style={{ width: 80 }} src={fontLine} /></div>
 
                     </div>))}
             </div>

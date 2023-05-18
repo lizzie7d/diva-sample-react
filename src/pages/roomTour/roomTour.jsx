@@ -2,6 +2,7 @@ import { useState } from "react";
 import select from '../../assets/asset/right-select.png';
 import unselected from '../../assets/asset/right-unselected.png';
 import DetailSize from "./detailSize";
+import fontLine from '../../assets/asset/font-line.png';
 
 const RoomTour = () => {
     const [selectIndex, setSelectIndex] = useState(0);
@@ -20,6 +21,7 @@ const RoomTour = () => {
                         color: selectIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
                     }}>
                     <div >{item.title}</div>
+                    <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
 
                 </div>))}
 
