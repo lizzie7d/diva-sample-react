@@ -7,6 +7,8 @@ import fontLine from '../../assets/asset/font-line.png';
 import logo from '../../assets/asset/logo.png';
 import closeDetail from '../../assets/asset/closeIcon.png';
 import RailwayVideo from '../railwayVideo';
+import { Modal } from 'antd';
+import { Player } from 'video-react';
 
 const TopSide = () => {
     const [visible, setVisible] = useState(false);
@@ -47,6 +49,7 @@ const TopSide = () => {
     }
 
     const onClickTheTitle = (index, item) => {
+        console.log(index);
         if (index === 3) {
             explore();
             setVisible(true);
@@ -54,16 +57,23 @@ const TopSide = () => {
         if (index === 2) {
             close();
         }
+        if (index === 0 || index === 1) {
+            setVisible(false);
+
+        }
+
         setSelectIndex(index);
         switchScene(item);
     }
 
+
     const metroTitle = [{ title: '道路交通', index: 1 }, { title: '轨道交通', index: 2 }, { title: ['双TOD上盖', '内部结构'], index: 3 },];
     return (
         <div>
+
             {visible && (<div className="railway-video">
                 <img src={closeDetail} onClick={() => { setVisible(false) }} className='close-detail' />
-                <video style={{ width: 500, height: 500, marginTop: 50 }} loop src="https://video.picbling.cn/zzz_20230516_348606_c8855ad5-284d-4d36-90c5-6fc6fdb79955-1080.mp4" autoPlay />
+                <video style={{ width: 500, height: 300, marginTop: 30 }} loop src="https://video.picbling.cn/zzz_20230516_348606_c8855ad5-284d-4d36-90c5-6fc6fdb79955-1080.mp4" autoPlay />
             </div>)}
             <div>
                 <img className='logo-style' src={logo} />
@@ -106,7 +116,6 @@ const TopSide = () => {
                     </div>))}
 
             </div>
-
         </div>
 
 

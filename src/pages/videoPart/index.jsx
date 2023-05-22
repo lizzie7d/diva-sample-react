@@ -18,7 +18,7 @@ const VideoPart = () => {
             {/* {selectIndex === 0 && <Education />} */}
             {selectIndex === 1 && (< Cloud />)}
 
-            <div className="top-side" style={{ width: 270 }}>
+            {/* <div className="top-side" style={{ width: 270 }}>
                 {topTitle.map((item, index) => (
                     <div
                         onClick={() => setSelectIndex(index)}
@@ -33,7 +33,7 @@ const VideoPart = () => {
                     </div>))}
 
 
-            </div>
+            </div> */}
 
         </div>
 

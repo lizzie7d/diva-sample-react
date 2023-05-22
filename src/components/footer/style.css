@@ -13,6 +13,26 @@
 
 }
 
+.video-img {
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 42%;
+    width: 10%;
+    z-index: 999;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.video-img>img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 260px;
+    left: 48%;
+}
+
 .single-section {
     color: #FFFFFF;
     display: flex;

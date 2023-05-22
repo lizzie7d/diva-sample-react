@@ -28,7 +28,7 @@ const PplContent = () => {
                 <img className='logo-style' src={logo} />
 
             </div>
-            <video ref={videoRef} src="https://video.picbling.cn/zzz_20230510_348606_2be3f13c-5076-4201-9ec0-485c6984071f-1080.mp4" controls></video>
+            <video ref={videoRef} src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E4%BA%91%E5%BA%90%E5%8C%BA%E4%BD%8D%E6%80%BB%E5%9B%BE0518.m4v?Expires=1684758491&OSSAccessKeyId=TMP.3KgyAPxHzBc8ktKoVbbQPmt3CWxkpGZcC2vmtR4T8M8XwnpUuuaVUstUKifKiVFPVcvVc39rG3wZDKYuYavgFNtdM4yC26&Signature=78%2FxU6df%2FMWVgfvmBFem0Kkl%2Fd0%3D" controls></video>
 
             <div className="leftside-contain" style={{ height: 640, visibility: !pause ? 'hidden' : 'unset' }}>
                 <div className="sectionThree">

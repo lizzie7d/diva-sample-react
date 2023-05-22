@@ -2,12 +2,12 @@ import './style.css'
 import titleImg from '../../assets/asset/title-bottom.png';
 import lineButtom from '../../assets/asset/line-buttom.png';
 import line from '../../assets/asset/line.png';
-import pic1 from '../../assets/asset/pic1.png';
-import pic2 from '../../assets/asset/railway/pic2.png';
-import pic3 from '../../assets/asset/railway/pic3.png';
-import pic4 from '../../assets/asset/railway/pic4.png';
-import pic5 from '../../assets/asset/railway/pic5.png';
-import pic6 from '../../assets/asset/railway/pic6.png';
+import pic1 from '../../assets/left1.png';
+import pic2 from '../../assets/left2.png';
+import pic3 from '../../assets/left3.png';
+import pic4 from '../../assets/right1.png';
+import pic5 from '../../assets/right2.png';
+import pic6 from '../../assets/right3.png';
 import { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
@@ -22,29 +22,20 @@ const InfoContent = () => {
     const [pause, setPause] = useState(true);
     const buttomTitle = ["市政文体中轴", '人文都市'];
     const [buttomIndex, setButtomIndex] = useState(0);
-    useEffect(() => {
-        videoRef.current.addEventListener('pause', function (e) {
-            setPause(true);
 
-        })
-        videoRef.current.addEventListener('play', function (e) {
-            setPause(false);
-        })
-
-    })
     return (
         <div >
             <div>
                 <img className='logo-style' src={logo} />
 
             </div>
-            <video controls src="https://video.picbling.cn/zzz_20230510_348606_854e7b76-0ec5-40c7-b06c-58b700f644a0-1080.mp4"
+            {/* <video controls style={{ width: '100%' }} src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E4%BA%91%E5%BA%90%E5%8C%BA%E4%BD%8D%E6%80%BB%E5%9B%BE0518.m4v?Expires=1684506710&OSSAccessKeyId=TMP.3KgdfKabh4VnK7PD6VdrppXy25iD6bav6J3MrY54zCPPfp4JjDNCHc45HKJdUFs8ohfaHPm1KnczBGx498BJws7GU69km9&Signature=MvuP6%2FtB%2F76BE5v5WYB3sM%2BGaCM%3D"
                 ref={videoRef}
-            ></video>
+            ></video> */}
             {/* <Education /> */}
             {buttomIndex === 1 && (< PplContent />)}
 
-            <div className="education" style={{ width: 270, fontSize: 16, }}>
+            {/* <div className="education" style={{ width: 270, fontSize: 16, }}>
                 {buttomTitle.map((item, index) => (
                     <div
                         onClick={() => { setButtomIndex(index) }}
@@ -58,7 +49,7 @@ const InfoContent = () => {
                         <div style={{ marginTop: '-32px' }}><img style={{ width: 80 }} src={fontLine} /></div>
 
                     </div>))}
-            </div>
+            </div> */}
             <div
                 // className={!start ? "video1-bg" : "video1-bg-none"}
                 // className='video1-bg'
@@ -66,35 +57,35 @@ const InfoContent = () => {
                 <div className="leftside-contain" style={{ height: 720, visibility: !pause ? 'hidden' : buttomIndex === 1 ? 'hidden' : 'unset' }}>
                     <div className="sectionThree">
                         <div className="left-title">
-                            千年城脉 广州第一中轴线
+                            白云新城
                             <img src={titleImg} />
                         </div>
                         <img src={line} style={{ marginBottom: 10 }} />
                         <div className='info-manage'>
                             <div className="info-box">
                                 <div className="info-title">
-                                    广州新城
+                                    5号停机坪购物广场
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic1} />
+                                    <img src={pic1} style={{ width: 284, height: 168 }} />
 
                                 </div>
                             </div>
                             <div className="info-box">
                                 <div className="info-title">
-                                    北京路
+                                    城市规划展览中心
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic2} />
+                                    <img src={pic2} style={{ width: 284, height: 168 }} />
 
                                 </div>
                             </div>
                             <div className="info-box">
                                 <div className="info-title">
-                                    海珠桥
+                                    广州新体育馆
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic3} />
+                                    <img src={pic3} style={{ width: 284, height: 168 }} />
 
                                 </div>
                             </div>
@@ -108,35 +99,35 @@ const InfoContent = () => {
                 <div className="rightside-contain" style={{ height: 720, visibility: !pause ? 'hidden' : buttomIndex === 1 ? 'hidden' : 'unset' }}>
                     <div className="sectionThree">
                         <div className="left-title">
-                            千年城脉 广州第一中轴线
+                            珠江新城
                             <img src={titleImg}></img>
                         </div>
                         <img src={line} style={{ marginBottom: 10 }} />
                         <div className='info-manage'>
                             <div className="info-box">
                                 <div className="info-title">
-                                    广东省、广州市政府
+                                    广州塔
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic4} />
+                                    <img src={pic4} style={{ width: 284, height: 168 }} />
 
                                 </div>
                             </div>
                             <div className="info-box">
                                 <div className="info-title">
-                                    中山纪念堂
+                                    正佳广场
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic5} />
+                                    <img src={pic5} style={{ width: 284, height: 168 }} />
 
                                 </div>
                             </div>
                             <div className="info-box">
                                 <div className="info-title">
-                                    白云山
+                                    中信广场
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic6} />
+                                    <img src={pic6} style={{ width: 284, height: 168 }} />
 
                                 </div>
                             </div>
