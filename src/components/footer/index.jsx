@@ -28,27 +28,25 @@ import WestBeauty from '../../pages/ChineBeauty';
 import fontLine from '../../assets/asset/font-line.png';
 import select from '../../assets/asset/right-select.png';
 import unselected from '../../assets/asset/right-unselected.png';
-import play from '../../assets/play.png';
 
-import { Player } from 'video-react';
 const Footer = () => {
     const videoRef = useRef();
     const [pause, setPause] = useState(true);
-
     const switchScene = (scene) => {
-        console.log(scene, "山脉城杨");
         if (scene !== 3) {
             diva.client.applyScene(scene).then(() => {
             });
         }
+
     }
     const [westSelect, setWestSelect] = useState(0);
 
-    const titleName = [{ title: '广州地铁', index: 0 }, { title: '山脉城央', index: 15 }, { title: '云山圈层', index: 0 }, { title: '城市TOD', index: 1 }, { title: '汇聚繁华', index: 4 }, { title: '和美山居', index: 6 }, { title: '东方美学', index: 7 }];
+    const titleName = [{ title: '广州地铁', index: 0 }, { title: '山脉城央', index: 15 }, { title: '云山圈层', index: 0 }, { title: '城市TOD', index: 1 }, { title: '汇聚繁华', index: 4 }, { title: '和美山居', index: 28 }, { title: '东方美学', index: 7 }];
     const unSelectPicSrc = [road, music, posi, spider, goal, home, book];
     const selectPic = [lightTrain, lightMusic, lightPosi, lightSpider, lightGoal, lightHome, lightBook];
     const [selectIndex, setSelectIndex] = useState(0);
-    const metroTitle = [{ title: '建筑漫游', index: 1 }, { title: ' 园林漫游', index: 2 }];
+    const metroTitle = [
+        { title: '建筑漫游', index: 1 }, { title: ' 园林漫游', index: 2 }];
     const videoTwoRef = useRef();
     const videoOneRef = useRef();
 
@@ -115,26 +113,17 @@ const Footer = () => {
             {selectIndex === 0 && (<MetroTitle />)}
             {selectIndex === 2 && (<LeftSide />)}
             {selectIndex === 4 && (<RightSide />)}
-            {pause && selectIndex === 1 && (<VideoPart />)}
+            {selectIndex === 1 && (<VideoPart />)}
             {selectIndex === 5 && (<RoomTour />)}
-            {/* {selectIndex === 6 && (<WestBeauty />)} */}
 
             {selectIndex === 1 && (
-                <div>
-                    <video controls style={{ width: '100%' }}
-                        src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E4%BA%91%E5%BA%90%E5%8C%BA%E4%BD%8D%E6%80%BB%E5%9B%BE0518.m4v?Expires=1684758491&OSSAccessKeyId=TMP.3KgyAPxHzBc8ktKoVbbQPmt3CWxkpGZcC2vmtR4T8M8XwnpUuuaVUstUKifKiVFPVcvVc39rG3wZDKYuYavgFNtdM4yC26&Signature=78%2FxU6df%2FMWVgfvmBFem0Kkl%2Fd0%3D"
-                        ref={videoRef}
-                    ></video>
-                    {pause && (
-                        <div class="video-img" onClick={() => onPlayVideo(1)} ><img src={play} /></div>
-                    )}
-                </div>
-
-                // <Player>
-                //     <source src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E4%BA%91%E5%BA%90%E5%8C%BA%E4%BD%8D%E6%80%BB%E5%9B%BE0518.m4v?Expires=1684758491&OSSAccessKeyId=TMP.3KgyAPxHzBc8ktKoVbbQPmt3CWxkpGZcC2vmtR4T8M8XwnpUuuaVUstUKifKiVFPVcvVc39rG3wZDKYuYavgFNtdM4yC26&Signature=78%2FxU6df%2FMWVgfvmBFem0Kkl%2Fd0%3D" />
-                // </Player>
-
-            )}
+                <video autoPlay style={{ width: '100%' }}
+                    src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E4%BA%91%E5%BA%90%E5%8C%BA%E4%BD%8D%E6%80%BB%E5%9B%BE0518.m4v?Expires=1685362991&OSSAccessKeyId=TMP.3KgiY2qSsocRuqt77LktSqzb1prjMty7X5azMapFyQeSM49tA5mBqpSBGCJ3djez1uwQSVLz3WmbqJdMErVPkss95qK5vm&Signature=%2FZl1zzhMccNjufStQCYZAgxhgjk%3D"
+                    ref={videoRef} loop
+                    controls
+                ></video>
+            )
+            }
             <div className='footer-container' style={{ visibility: !pause ? 'hidden' : 'unset' }}>
                 <img src={menu} />
                 <div className="flex-menu" >
@@ -149,48 +138,49 @@ const Footer = () => {
                 </div>
 
             </div >
-            {selectIndex === 6 && (<div>
-                {westSelect === 0 && (
-                    <div>
-                        <video width={"100%"}
+            {
+                selectIndex === 6 && (<div>
+                    {westSelect === 0 && (
+                        <div>
+                            <video width={"100%"}
+                                ref={videoOneRef}
+                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%BB%BA%E7%AD%91%E6%BC%AB%E6%B8%B8518.mp4?Expires=1685363062&OSSAccessKeyId=TMP.3KgiY2qSsocRuqt77LktSqzb1prjMty7X5azMapFyQeSM49tA5mBqpSBGCJ3djez1uwQSVLz3WmbqJdMErVPkss95qK5vm&Signature=QzTacWIMr2%2FpZkIdzi5CGpvNaxk%3D"
+                            ></video>
 
-                            ref={videoOneRef}
-                            controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%BB%BA%E7%AD%91%E6%BC%AB%E6%B8%B8518.mp4?Expires=1684506773&OSSAccessKeyId=TMP.3KgdfKabh4VnK7PD6VdrppXy25iD6bav6J3MrY54zCPPfp4JjDNCHc45HKJdUFs8ohfaHPm1KnczBGx498BJws7GU69km9&Signature=PKJQVJTG675TpHobrBqGTCCEFW0%3D"
-                        ></video>
-                        {pause && (
-                            <div class="video-img" onClick={() => onPlayVideo(2)} ><img src={play} /></div>
-                        )}</div>
-                )}
-                {westSelect === 1 && (
-                    <div>
-                        <video width={"100%"}
+                        </div>
+                    )}
+                    {westSelect === 1 && (
+                        <div>
+                            <video width={"100%"}
+                                ref={videoTwoRef}
+                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%9B%AD%E6%9E%97%E6%BC%AB%E6%B8%B8.mp4?Expires=1685363016&OSSAccessKeyId=TMP.3KgiY2qSsocRuqt77LktSqzb1prjMty7X5azMapFyQeSM49tA5mBqpSBGCJ3djez1uwQSVLz3WmbqJdMErVPkss95qK5vm&Signature=BwAOZ6itkppajOWNXlExszSauac%3D"
+                            ></video>
 
-                            ref={videoTwoRef}
-                            controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%BB%BA%E7%AD%91%E6%BC%AB%E6%B8%B8518.mp4?Expires=1684506773&OSSAccessKeyId=TMP.3KgdfKabh4VnK7PD6VdrppXy25iD6bav6J3MrY54zCPPfp4JjDNCHc45HKJdUFs8ohfaHPm1KnczBGx498BJws7GU69km9&Signature=PKJQVJTG675TpHobrBqGTCCEFW0%3D"
-                        ></video>
-                        {pause && (
-                            <div class="video-img" onClick={() => onPlayVideo(3)} ><img src={play} /></div>
-                        )}</div>
-                )}
-                <div className="top-side" style={{ width: 276 }}>
+                        </div>
+                    )}
+                    <div className="top-side" style={{ width: 276 }}>
 
-                    {metroTitle.map((item, index) => (
-                        <div
-                            onClick={() => { setWestSelect(index); }}
-                            className="metro-section" key={item.index}
-                            style={{
-                                backgroundImage: westSelect === index ? `url(${unselected})` : `url(${select})`,
-                                color: westSelect === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
-                            }}>
-                            <div >{item.title}</div>
-                            <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
+                        {metroTitle.map((item, index) => (
+                            <div
+                                onClick={() => { setWestSelect(index); }}
+                                className="metro-section" key={item.index}
+                                style={{
+                                    backgroundImage: westSelect === index ? `url(${unselected})` : `url(${select})`,
+                                    color: westSelect === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
+                                }}>
+                                <div >{item.title}</div>
+                                <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
 
-                        </div>))}
+                            </div>))}
 
 
-                </div>
-            </div>)}
-        </div>
+                    </div>
+
+
+
+                </div>)
+            }
+        </div >
 
     )
 }

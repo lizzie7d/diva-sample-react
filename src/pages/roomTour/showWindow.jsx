@@ -3,6 +3,8 @@ import lineBlur from '../../assets/asset/line-blur.png';
 import detailIcon from '../../assets/asset/detailIcon.png';
 import closeDetail from '../../assets/asset/closeIcon.png';
 import roomButton from '../../assets/asset/户型按钮.png';
+import roomSmall from '../../assets/asset/room-small.png';
+
 import { useState } from 'react';
 
 const DetailWindow = (props) => {
@@ -11,17 +13,17 @@ const DetailWindow = (props) => {
         <div>
             {props.prop && detail && (<div className="window-basic">
                 <img src={closeDetail} className='close-detail' onClick={() => showDetail(false)} />
-                <div><img style={{ width: 450, height: 500 }} src={roomBig} /></div>
+                <div><img className='room-big' src={roomSmall} /></div>
                 <div>
                     <div className="three-part" style={{ width: 200 }}>
                         <div className="room-size">
                             <div className="company-logo">
-                                <div style={{ fontSize: 32 }}>云璟</div>
+                                <div className='small-room-title'>云璟</div>
                                 <div>都市峯范</div>
                             </div>
                             <div className="size-detail">
-                                <div style={{ fontSize: 12 }}>建筑面积约：</div>
-                                <div style={{ fontSize: 32 }}>142m2 </div>
+                                <div className='room-size-title'>建筑面积约：</div>
+                                <div className='small-room-title'>142m<sup>2</sup> </div>
                             </div>
 
                         </div>

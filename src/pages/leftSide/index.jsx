@@ -1,20 +1,17 @@
 import './style.css';
 import titleImg from '../../assets/asset/title-bottom.png';
 import lineButtom from '../../assets/asset/line-buttom.png';
-import { useEffect } from 'react';
 import logo from '../../assets/asset/logo.png';
 
 const LeftSide = () => {
-    useEffect(() => {
-        console.log(localStorage.getItem('scene'), 1213);
-    })
+
     return (
         <div>
             <div>
                 <img className='logo-style' src={logo} />
 
             </div>
-            <div className="leftside-contain">
+            <div className="leftside-fuyang">
 
                 <div className="sectionThree">
                     <div className="left-title">

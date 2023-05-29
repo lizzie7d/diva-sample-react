@@ -54,20 +54,19 @@ const InfoContent = () => {
                 // className={!start ? "video1-bg" : "video1-bg-none"}
                 // className='video1-bg'
                 style={{}} >
-                <div className="leftside-contain" style={{ height: 720, visibility: !pause ? 'hidden' : buttomIndex === 1 ? 'hidden' : 'unset' }}>
+                <div className="leftside-contain" style={{ visibility: !pause ? 'hidden' : buttomIndex === 1 ? 'hidden' : 'unset' }}>
                     <div className="sectionThree">
                         <div className="left-title">
                             白云新城
                             <img src={titleImg} />
                         </div>
-                        <img src={line} style={{ marginBottom: 10 }} />
                         <div className='info-manage'>
                             <div className="info-box">
                                 <div className="info-title">
                                     5号停机坪购物广场
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic1} style={{ width: 284, height: 168 }} />
+                                    <img src={pic1} className='inside-pic' />
 
                                 </div>
                             </div>
@@ -76,7 +75,7 @@ const InfoContent = () => {
                                     城市规划展览中心
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic2} style={{ width: 284, height: 168 }} />
+                                    <img src={pic2} className='inside-pic' />
 
                                 </div>
                             </div>
@@ -85,7 +84,7 @@ const InfoContent = () => {
                                     广州新体育馆
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic3} style={{ width: 284, height: 168 }} />
+                                    <img src={pic3} className='inside-pic' />
 
                                 </div>
                             </div>
@@ -96,20 +95,19 @@ const InfoContent = () => {
                     </div>
 
                 </div>
-                <div className="rightside-contain" style={{ height: 720, visibility: !pause ? 'hidden' : buttomIndex === 1 ? 'hidden' : 'unset' }}>
+                <div className="rightside-contain" style={{ visibility: !pause ? 'hidden' : buttomIndex === 1 ? 'hidden' : 'unset' }}>
                     <div className="sectionThree">
                         <div className="left-title">
                             珠江新城
                             <img src={titleImg}></img>
                         </div>
-                        <img src={line} style={{ marginBottom: 10 }} />
                         <div className='info-manage'>
                             <div className="info-box">
                                 <div className="info-title">
                                     广州塔
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic4} style={{ width: 284, height: 168 }} />
+                                    <img src={pic4} className='inside-pic' />
 
                                 </div>
                             </div>
@@ -118,7 +116,7 @@ const InfoContent = () => {
                                     正佳广场
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic5} style={{ width: 284, height: 168 }} />
+                                    <img src={pic5} className='inside-pic' />
 
                                 </div>
                             </div>
@@ -127,7 +125,7 @@ const InfoContent = () => {
                                     中信广场
                                 </div>
                                 <div className='picture-part'>
-                                    <img src={pic6} style={{ width: 284, height: 168 }} />
+                                    <img src={pic6} className='inside-pic' />
 
                                 </div>
                             </div>

@@ -36,41 +36,10 @@
     gap: 10px;
 }
 
-.intro-content {
-    height: 600px;
-    width: 1200px;
-    /* background-color: rgba(0, 0, 0, 0.9); */
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 40px;
-}
 
-.intro-display {
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-    ;
-}
 
-.intro-title {
-    font-size: 36px;
-    color: rgba(51, 51, 51, 1);
-    ;
-}
 
-.intro-detail {
-    font-size: 20px;
-    color: rgba(51, 51, 51, 1);
-    font-family: 'Source Han Sans';
-    font-weight: 400;
-    margin-top: 16px;
-}
+
 
 .intro-card {
     display: flex;
@@ -124,22 +93,18 @@
     width: 600px;
 }
 
-.intro-flex {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-}
-
 .metro-right {
     display: flex;
     flex-direction: column;
 }
 
 .metro-card {
-    width: 600px;
-    height: 211px;
+    /* width: 600px;
+    height: 211px; */
     text-align: center;
 }
+
+
 
 .metro-detial {
     vertical-align: center;
@@ -150,19 +115,7 @@
     height: 211px;
 }
 
-.intro-flex {
-    height: 600px;
-    width: 1200px;
-    /* background-color: rgba(0, 0, 0, 0.9); */
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 40px;
-    gap: 60px
-}
+
 
 .metro-bottom {
     display: flex;
@@ -171,17 +124,13 @@
     position: absolute;
     left: 0;
     right: 0;
-    width: 400px;
+    width: 250px;
     /* top: 0; */
     margin: auto;
-    bottom: 100px;
+    bottom: 9%;
 }
 
-.main-three {
-    text-align: center;
-    font-weight: 700;
-    font-size: 36px;
-}
+
 
 .main-content {
     display: flex;
@@ -190,10 +139,7 @@
 
 }
 
-.main-pic {
-    width: 400px;
-    height: 180px;
-}
+
 
 .example-project {
     display: flex;
@@ -206,20 +152,12 @@
     height: 200px;
 }
 
-.pro-img {
-    width: 600px;
-    height: 175px;
-}
 
 .pro-content {
     height: 20px;
     background-color: rgba(51, 51, 51, 1);
     color: #fff;
     text-align: center;
-}
-
-.main-display-three {
-    width: 1200px;
 }
 
 .logo-style {

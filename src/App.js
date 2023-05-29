@@ -46,6 +46,7 @@ export default class App extends Component {
       const width = this.backendContainer.current.clientWidth;
       const height = this.backendContainer.current.clientHeight;
       diva.client.setResolution({ width, height });
+      console.log(width, height);
     }
   }
 

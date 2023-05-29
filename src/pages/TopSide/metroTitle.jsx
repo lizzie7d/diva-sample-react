@@ -32,7 +32,7 @@ const MetroTitle = () => {
 
         <div className='railway-page'>
 
-            {selectIndex === 1 && (<div className="metro-bottom" style={{ width: 300, }}>
+            {selectIndex === 1 && (<div className="metro-bottom" style={{ width: 250, }}>
                 {metroButtom.map((item, index) => (
                     <div
                         onClick={() => { setMetroIndex(index); }}
@@ -119,22 +119,29 @@ const MetroTitle = () => {
                                 </div>
                             </div>
 
-                            <div className="intro-title" style={{ marginTop: 80 }}>
+                            <div className="intro-title tod-pic" >
                                 TOD综合开发使命
-                                <img src={TOD} style={{ width: 640, height: 150 }} />
+                                <img src={TOD} className='tod-detail-pic' />
                             </div>
                         </div>
 
 
                     </div>
                     <div className='metro-right'>
-                        <div className='metro-card' style={{ backgroundImage: `url(${rightTop})` }}>
+                        <div className='metro-card'>
+                            <img src={rightTop} className='metro-pic' />
                             <div className="metro-detial">
                                 {/* 123 */}
                             </div>
                         </div>
-                        <div className='metro-card' style={{ backgroundImage: `url(${rightMiddle})` }}></div>
-                        <div className='metro-card' style={{ backgroundImage: `url(${rightButtom})` }}></div>
+                        <div className='metro-card'  >
+                            <img src={rightMiddle} className='metro-pic' />
+
+                        </div>
+                        <div className='metro-card'  >
+                            <img src={rightButtom} className='metro-pic' />
+
+                        </div>
 
 
                     </div>
@@ -166,7 +173,7 @@ const MetroTitle = () => {
                         <div className='main-three'>
                             三大核心优势
                         </div>
-                        <img src={mainline} style={{ marginTop: 12, marginBottom: 12, width: 1200 }} />
+                        <img src={mainline} className='three-line' />
                         <div className="main-content" style={{ width: 1200 }}>
                             <img className='main-pic' src={mainone} />
                             <img className='main-pic' src={maintwo} />
@@ -182,7 +189,7 @@ const MetroTitle = () => {
                         <img src={title} />
                     </div>
                     <img src={line} />
-                    <div className="intro-display">
+                    <div className="intro-ditie">
                         <div className="intro-title">
                             30轨年国企担当，匠造地标作品
                             <img src={titleLine} />
@@ -204,8 +211,8 @@ const MetroTitle = () => {
 
 
                         </div>
-                        <div className='pro-left'>
-                            <img style={{ height: 400, width: 600 }} src={pro2} />
+                        <div >
+                            <img className='pro-left' src={pro2} />
                         </div>
                     </div>
                 </div>
