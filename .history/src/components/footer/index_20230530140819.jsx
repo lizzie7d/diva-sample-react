@@ -144,7 +144,7 @@ const Footer = () => {
                         <div>
                             <video width={"100%"}
                                 ref={videoOneRef}
-                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%BB%BA%E7%AD%91%E6%BC%AB%E6%B8%B8518.mp4?Expires=1685459086&OSSAccessKeyId=TMP.3KkXjqNAB16uHuZj2zoZkKy87CfckGTHUUHXLjNuJ1ooT1s6W5BMRfAEWBKg2PR2QPRJTaH5SqpUWf7gGtwjKZRDmBqdE9&Signature=CgIpdX0pmIb5y60fqlg0vemvXOY%3D"
+                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%BB%BA%E7%AD%91%E6%BC%AB%E6%B8%B8518.mp4?Expires=1685363062&OSSAccessKeyId=TMP.3KgiY2qSsocRuqt77LktSqzb1prjMty7X5azMapFyQeSM49tA5mBqpSBGCJ3djez1uwQSVLz3WmbqJdMErVPkss95qK5vm&Signature=QzTacWIMr2%2FpZkIdzi5CGpvNaxk%3D"
                             ></video>
 
                         </div>
@@ -153,7 +153,7 @@ const Footer = () => {
                         <div>
                             <video width={"100%"}
                                 ref={videoTwoRef}
-                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%9B%AD%E6%9E%97%E6%BC%AB%E6%B8%B8.mp4?Expires=1685459080&OSSAccessKeyId=TMP.3KkXjqNAB16uHuZj2zoZkKy87CfckGTHUUHXLjNuJ1ooT1s6W5BMRfAEWBKg2PR2QPRJTaH5SqpUWf7gGtwjKZRDmBqdE9&Signature=ProeJouABIdzSqPlesiv%2BNK1axU%3D"
+                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%9B%AD%E6%9E%97%E6%BC%AB%E6%B8%B8.mp4?Expires=1685363016&OSSAccessKeyId=TMP.3KgiY2qSsocRuqt77LktSqzb1prjMty7X5azMapFyQeSM49tA5mBqpSBGCJ3djez1uwQSVLz3WmbqJdMErVPkss95qK5vm&Signature=BwAOZ6itkppajOWNXlExszSauac%3D"
                             ></video>
 
                         </div>
