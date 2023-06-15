@@ -1,0 +1,172 @@
+.top-side {
+    pointer-events: all;
+    margin: 0 auto;
+    display: flex;
+    width: 416px;
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.railway-top {
+    margin: 0 auto;
+    display: flex;
+justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+    font-size: 14px;
+}
+
+
+.flex-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+
+
+.intro-card {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+}
+
+.card-detail {
+    background-color: grey;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 600px;
+    padding: 40px;
+
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 284px;
+    height: 32px;
+    margin: 0 auto;
+}
+
+.card-intro {
+    margin-top: 24px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 20px;
+}
+
+.railway-page {
+    background-image: url(../../assets//asset//railway/底图.jpg);
+    height: 100vh;
+    /* padding-top: 16px; */
+    background-size: 100% 100% no-repeat;
+}
+
+.intro-title {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.metro-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.metro-card {
+    /* width: 600px;
+    height: 211px; */
+    text-align: center;
+}
+
+
+
+.metro-detial {
+    vertical-align: center;
+}
+
+.metro-left {
+    width: 600px;
+    height: 211px;
+}
+
+
+
+.metro-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 250px;
+    /* top: 0; */
+    margin: auto;
+    bottom: 9%;
+}
+
+
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+}
+
+
+
+.example-project {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.proleft {
+    width: 600px;
+    height: 200px;
+}
+
+
+.pro-content {
+    height: 20px;
+    background-color: rgba(51, 51, 51, 1);
+    color: #fff;
+    text-align: center;
+}
+
+.logo-style {
+    height: 50px;
+    width: 450px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.logo-position {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.logo-position {
+    height: 100px;
+    width: 600px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
