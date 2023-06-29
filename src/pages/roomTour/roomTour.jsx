@@ -59,7 +59,7 @@ const RoomTour = () => {
                             color: selectIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
                         }}>
                         <div >{item.title}</div>
-                        <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
+                        <div className="line-position"><img style={{ width: 82 }} src={fontLine} /></div>
 
                     </div>))}
 

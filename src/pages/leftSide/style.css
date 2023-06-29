@@ -233,7 +233,6 @@
 
 .tod-detail-pic {
     width: 640px;
-    height: 150px;
 }
 
 .main-display-three {
@@ -300,8 +299,39 @@
     width: 604px;
 
 }
+.metro-section {
+    width: 122px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
 
+    text-align: center;
+    /* text-decoration: underline; */
+    border-radius: 70px;
+    /* text-underline-offset: 0.4em; */
+}
+.line-position{
+    margin-top: -32px;
+}
+.right-title {
+    width: 122px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 70px;
+}
+.edu-title {
+    /* background-color: rgba(0, 0, 0, 0.45); */
+    width: 130px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 70px;
+
+}
 @media (max-width:1400px) {
+
+
     .metro-pic {
         width: 394px;
 
@@ -357,7 +387,6 @@
 
     .tod-detail-pic {
         width: 460px;
-        height: 88px;
 
     }
 
@@ -383,6 +412,8 @@
         left: 4%;
         bottom: 6%;
     }
+
+
 
     .room-size-title {
         font-size: 12px;
@@ -499,7 +530,88 @@
 
     }
 }
+.logo-style {
+    width: 450px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.metro-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    margin: auto;
+    bottom: 9%;
+}
 
+@media (max-width: 1200px) {
+    .right-title {
+        width: 84px;
+        height: 26px;
+        line-height: 26px;
+    }
+    .pro-left {
+        width: 438px
+    }
+    .pro-img {
+        width: 380px;
+    }
+    
+    .tod-detail-pic {
+        width: 400px;
+
+    }
+    .logo-style {
+        width: 300px;
+    }
+    .metro-bottom{
+bottom: 16%;
+
+    }
+
+    .subTitle-img{
+        width:150px
+    }
+
+    .subTitle-content{
+        display: flex;
+        flex-direction: row;
+    }
+    .intro-title{
+font-size: 18px;
+    }
+    .title img{
+        width: 380px;
+    }
+    .intro-content {
+        bottom: 12%;
+    }
+    .metro-section{
+        font-size: 12px;
+        width: 84px;
+        height: 26px;
+        line-height: 26px;
+
+    }
+    .edu-title {
+        font-size: 12px;
+        width: 84px;
+        height: 26px;
+        line-height: 26px;
+    
+    }
+    .line-position{
+        margin-top: -20px;
+    }
+
+    .intro-display{
+     font-size: 12px;
+    }
+}
 
 
 .left-title {

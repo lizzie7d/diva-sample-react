@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { useEffect, useState } from 'react';
 import './style.css';
 import { data, diva } from '../../global';
@@ -98,24 +99,23 @@ const TopSide = () => {
                         }}>
                         {item.title.length !== 2 ?
                             <div >{item.title}
-                                <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
+                                <div className='line-position'><img style={{ width: 82 }} src={fontLine} /></div>
                             </div> : (
                                 <div className='flex-title'>
                                     <div>{item.title[0]}
-                                        <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
+                                        <div className='line-position'><img style={{ width: 82 }} src={fontLine} /></div>
                                     </div>
                                     {selectIndex === 2 && (<div
                                         onClick={() => onClickTheTitle(3, item.index)}
+                                        className="metro-section"
                                         style={{
-                                            borderRadius: 70,
-                                            height: 38,
-                                            fontSize: 14,
-                                            opacity: 0.7,
+
+                                            // width
                                             backgroundImage: selectIndex === index ? `url(${unselected})` : `url(${select})`,
                                             color: selectIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)',
                                             backgroundRepeat: 'no-repeat'
                                         }}>{item.title[1]}
-                                        <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
+                                        <div className='line-position'><img style={{ width: 82 }} src={fontLine} /></div>
 
                                     </div>)}
                                 </div>
