@@ -2,7 +2,7 @@
     pointer-events: all;
     margin: 0 auto;
     display: flex;
-justify-content: center;
+    width: 416px;
     flex-direction: row;
     gap: 24px;
     margin-top: 16px;
@@ -12,12 +12,24 @@ justify-content: center;
 .railway-top {
     margin: 0 auto;
     display: flex;
-justify-content: center;
+    width: 412px;
     flex-direction: row;
     gap: 24px;
     font-size: 14px;
 }
 
+
+.metro-section {
+    width: 122px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+
+    text-align: center;
+    /* text-decoration: underline; */
+    border-radius: 70px;
+    /* text-underline-offset: 0.4em; */
+}
 
 
 .flex-title {
@@ -84,8 +96,9 @@ justify-content: center;
     background-image: url(../../assets//asset//railway/底图.jpg);
     height: 100vh;
     /* padding-top: 16px; */
-    background-size: 100% 100% ;
-    background-repeat: no-repeat;
+    background-size: 100% 100% no-repeat;
+    pointer-events: all;
+
 }
 
 .intro-title {
@@ -120,6 +133,19 @@ justify-content: center;
 
 
 
+.metro-bottom {
+    pointer-events: all;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 250px;
+    /* top: 0; */
+    margin: auto;
+    bottom: 9%;
+}
 
 
 
@@ -151,6 +177,14 @@ justify-content: center;
     text-align: center;
 }
 
+.logo-style {
+    height: 50px;
+    width: 450px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
 
 .logo-position {
     position: absolute;
