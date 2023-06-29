@@ -21,15 +21,21 @@ const DetailSize = () => {
             visibility: true,
             duration: 0
         })
+        // diva.client.request('SetNavigationMode', {
+        //     mode: 1      // 支持 0：DIVA 默认交互；1：鼠标左键绕中心旋转，中键旋转镜头，右键平移
+        // })
     }
 
+    useEffect(() => {
 
+    }, []);
     return (
         <div>
             {scene && (<RoomRight />)}
 
             {/* {detail && (<DetailWindow prop={detail} />)} */}
-            {smallRoom && (<div className="room-detail-box">
+            {smallRoom && (
+            <div className="room-detail-box">
                 <div className="three-part">
                     <div className="room-size">
                         <div className="company-logo">
@@ -95,7 +101,7 @@ const DetailSize = () => {
 
                         </div>
                     </div>
-                    <img src={roomButton} onClick={() => { setDetail(false); setSmallRoom(false); setScene(true); switchScene(26); }} className='enter-style' />
+                    <img src={roomButton} onClick={() => { setDetail(false); setSmallRoom(false); setScene(true); switchScene(25); }} className='enter-style' />
 
                 </div>
             </div>)}

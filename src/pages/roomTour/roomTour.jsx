@@ -3,58 +3,56 @@ import select from '../../assets/asset/right-select.png';
 import unselected from '../../assets/asset/right-unselected.png';
 import DetailSize from "./detailSize";
 import fontLine from '../../assets/asset/font-line.png';
-import RoomRight from "../roomRight";
 import { data, diva } from '../../global';
-import { RenderMode } from '@sheencity/diva-sdk';
+import roomSmall from '../../assets/asset/room-small.png';
+import lineBlur from '../../assets/asset/line-blur.png';
+import roomPic from '../../assets/picSmall1.png';
+import lineButtom from '../../assets/asset/line-buttom.png';
+
 const RoomTour = () => {
     const [selectIndex, setSelectIndex] = useState(-1);
 
-    const metroTitle = [{ title: '云熙', index: 1 }, { title: '云璟', index: 2 }, { title: '云鼎', index: 3 },];
+    const metroTitle = [{ title: '云熙', index: 27 }, { title: '云璟', index: 26 }, { title: '云鼎', index: 28 },];
 
-    useEffect(() => {
-        if (selectIndex === 1) {
-
-            diva.client.request('SetEntityRenderMode', {
-                id: "E739519C4A3C7C37797E0883339E365F",  // 目标对象的 entityId
-                mode: "highlight"                        // 叠色高亮模式
-            })
-            diva.client.request('SetEntityRenderMode', {
-                id: "82A272F44593FD2E5CAF3AACB96809A6",  // 目标对象的 entityId
-                mode: "highlight"                        // 叠色高亮模式
-            })
-            diva.client.request('SetEntityRenderMode', {
-                id: "49414ADE40C9A803A5B1E9911C2EA803",  // 目标对象的 entityId
-                mode: "highlight"                        // 叠色高亮模式
-            })
-            diva.client.request('SetHighlightStyle', {
-                color: [65, 150, 255, 55],                // 叠加颜色，[r,g,b,a]，元素范围是 0 ~ 255，以 alpha 值设置透明度
-                borderColor: [0, 0, 0],                 // 可选, 边缘色，[r,g,b]，取值范围 [0,0,0]~[255,255,255]，默认 [0,0,0]
-                borderSize: 0                       // 可选, 边缘宽，值域[0, 10]，默认 0
-            })
-        }
-        return () => {
-            diva.client.request('SetEntityRenderMode', {
-                id: "E739519C4A3C7C37797E0883339E365F",  // 目标对象的 entityId
-                mode: "default"                        // 叠色高亮模式
-            })
-            diva.client.request('SetEntityRenderMode', {
-                id: "82A272F44593FD2E5CAF3AACB96809A6",  // 目标对象的 entityId
-                mode: "default"                        // 叠色高亮模式
-            })
-            diva.client.request('SetEntityRenderMode', {
-                id: "49414ADE40C9A803A5B1E9911C2EA803",  // 目标对象的 entityId
-                mode: "default"                        // 叠色高亮模式
-            })
-        };
-    })
     return (
         <div>
             {selectIndex === 1 && (<DetailSize />)}
+{selectIndex ===0 &&(
+     <div className="room-detail-box">
+     <div className="three-part">
+         <div className="room-size">
+             <div className="company-logo">
+                 <div className='small-room-title'>云熙</div>
+                 <div>向阳宽景</div>
+             </div>
+             <div className="size-detail">
+                 <div className='room-size-title'>建筑面积约：</div>
+                 <div className='small-room-title'>127m<sup>2</sup> </div>
+             </div>
 
+         </div>
+         <img src={lineBlur} />
+
+         <div style={{ fontSize: 20 }}>四房三套房</div>
+         <img src={lineBlur} />
+
+         <div>
+             <img className="room-small" src={roomPic} />
+         </div>
+         <img className='left-buttom' src={lineButtom}></img>
+     </div>
+
+ </div>
+)}
             <div className="top-side">
                 {metroTitle.map((item, index) => (
                     <div
-                        onClick={() => { setSelectIndex(index); }}
+                        onClick={() => {
+                            setSelectIndex(index);
+                            diva.client?.applyScene(item.index).then(() => {
+                            });
+                        }
+                        }
                         className="metro-section" key={item.index}
                         style={{
                             backgroundImage: selectIndex === index ? `url(${unselected})` : `url(${select})`,

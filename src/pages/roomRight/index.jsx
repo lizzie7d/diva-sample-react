@@ -11,6 +11,17 @@ const RoomRight = () => {
     const [selectIndex, setSelectIndex] = useState(-1);
 
     const switchScene = (scene) => {
+        if(scene==='阳台'){
+            // diva.client?.applyScene(scene).then(() => {
+            // });
+            diva.client.request("ApplyScene", {
+                name:"阳台", 
+                camera: true,
+                env: true,
+                visibility: true,
+                duration: 0
+            })
+        }else
         diva.client.request('PlayCameraTrack', {
             name: scene,    // DIVA 编辑器中漫游轨的名称
             loop: false,      // 可选，默认为 false，是否循环播放
@@ -25,7 +36,10 @@ const RoomRight = () => {
     { title: "卫生间" },
     { title: "厨房" },
     { title: "女孩房" },
-    { title: "男孩房" }];
+    { title: "男孩房" },
+    { title: "阳台" },
+
+];
     return (
         <div className="room-right-title">
             {title.map((item, index) => (<div key={item.index}

@@ -47,12 +47,21 @@ const TopSide = () => {
             scale: [1.0, 1.0, 1.0]                     // 可选，目标对象的缩放 [scaleX,scaleY,scaleZ]
         })
     }
-
+    const switchSceneByRoad = (scene) => {
+        diva.client.request('PlayCameraTrack', {
+            name: scene,    // DIVA 编辑器中漫游轨的名称
+            loop: false,      // 可选，默认为 false，是否循环播放
+            camera: true,     // 可选，默认为 true，是否应用预设的镜头位置
+            env: true,        // 可选，默认为 true，是否应用预设的天空后期环境效果
+            animation: true   // 可选，默认为 true，是否应用动画效果，注意仅对动画漫游轨中确实存在过渡动画数据的情况有效
+        })
+    }
     const onClickTheTitle = (index, item) => {
         console.log(index);
         if (index === 3) {
             explore();
             setVisible(true);
+            switchSceneByRoad('路线亮化');
         }
         if (index === 2) {
             close();
@@ -61,13 +70,12 @@ const TopSide = () => {
             setVisible(false);
 
         }
-
         setSelectIndex(index);
         switchScene(item);
     }
 
 
-    const metroTitle = [{ title: '道路交通', index: 1 }, { title: '轨道交通', index: 2 }, { title: ['双TOD上盖', '内部结构'], index: 3 },];
+    const metroTitle = [{ title: '道路交通', index: 1 }, { title: '轨道交通', index: 2 }, { title: ['双TOD上盖', '归家通道'], index: 3 },];
     return (
         <div>
 
@@ -103,7 +111,6 @@ const TopSide = () => {
                                             height: 38,
                                             fontSize: 14,
                                             opacity: 0.7,
-                                            // width
                                             backgroundImage: selectIndex === index ? `url(${unselected})` : `url(${select})`,
                                             color: selectIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)',
                                             backgroundRepeat: 'no-repeat'

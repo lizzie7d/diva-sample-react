@@ -28,20 +28,20 @@ import WestBeauty from '../../pages/ChineBeauty';
 import fontLine from '../../assets/asset/font-line.png';
 import select from '../../assets/asset/right-select.png';
 import unselected from '../../assets/asset/right-unselected.png';
-
 const Footer = () => {
     const videoRef = useRef();
     const [pause, setPause] = useState(true);
     const switchScene = (scene) => {
         if (scene !== 3) {
-            diva.client.applyScene(scene).then(() => {
+            diva.client?.applyScene(scene).then(() => {
             });
         }
 
     }
     const [westSelect, setWestSelect] = useState(0);
-
-    const titleName = [{ title: '广州地铁', index: 0 }, { title: '山脉城央', index: 15 }, { title: '云山圈层', index: 0 }, { title: '城市TOD', index: 1 }, { title: '汇聚繁华', index: 4 }, { title: '和美山居', index: 28 }, { title: '东方美学', index: 7 }];
+    const title = [{ title: '山门', index: "山门" }, { title: '溪涧', index: "溪涧" }, { title: '石光', index: "石光" }, { title: '林泉', index: "林泉" }, { title: '巢谷', index: "巢谷" },{ title: '咏乐', index: "咏乐" },{ title: '麓栖', index: "麓栖" },{ title: '山丘', index: "山丘" },{ title: '云隐', index: "云隐" }];
+const [videoIndex,setVideoIndex]=useState(10);
+    const titleName = [{ title: '广州地铁', index: 0 }, { title: '山脉城央', index: -1 }, { title: '云山圈层', index: 0 }, { title: '城市TOD', index: 1 }, { title: '汇聚繁华', index: 4 }, { title: '和美山居', index: 28 }, { title: '东方美学', index: 7 }];
     const unSelectPicSrc = [road, music, posi, spider, goal, home, book];
     const selectPic = [lightTrain, lightMusic, lightPosi, lightSpider, lightGoal, lightHome, lightBook];
     const [selectIndex, setSelectIndex] = useState(0);
@@ -90,7 +90,7 @@ const Footer = () => {
                     setPause(false);
                 })
             }
-            if (westSelect === 1) {
+            if (westSelect === 1&&videoIndex===10) {
                 videoTwoRef.current.addEventListener('pause', function (e) {
                     setPause(true);
 
@@ -118,20 +118,20 @@ const Footer = () => {
 
             {selectIndex === 1 && (
                 <video autoPlay style={{ width: '100%' }}
-                    src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E4%BA%91%E5%BA%90%E5%8C%BA%E4%BD%8D%E6%80%BB%E5%9B%BE0518.m4v?Expires=1685362991&OSSAccessKeyId=TMP.3KgiY2qSsocRuqt77LktSqzb1prjMty7X5azMapFyQeSM49tA5mBqpSBGCJ3djez1uwQSVLz3WmbqJdMErVPkss95qK5vm&Signature=%2FZl1zzhMccNjufStQCYZAgxhgjk%3D"
+                    src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E4%BA%91%E5%BA%90%E5%8C%BA%E4%BD%8D%E6%80%BB%E5%9B%BE0518.m4v"
                     ref={videoRef} loop
                     controls
                 ></video>
             )
             }
             <div className='footer-container' style={{ visibility: !pause ? 'hidden' : 'unset' }}>
-                <img src={menu} />
+                < img src={menu} />
                 <div className="flex-menu" >
                     {titleName.map((item, index) => (
                         <div key={item.index} className="single-section" onClick={() => { setSelectIndex(index); switchScene(item.index); }}>
-                            {selectIndex === index && (<img className='section-pic' src={footerSelect} />)}
+                            {selectIndex === index && (< img className='section-pic' src={footerSelect} />)}
                             <div className='title-position' style={{ color: selectIndex === index ? 'rgb(255, 255, 255)' : 'rgba(255, 255, 255, 0.7)' }}>
-                                <img style={{ marginRight: 6 }} className='pic-src' src={selectIndex === index ? selectPic[index] : unSelectPicSrc[index]} />
+                                < img style={{ marginRight: 6 }} className='pic-src' src={selectIndex === index ? selectPic[index] : unSelectPicSrc[index]} />
                                 <span> {item.title}</span>
                             </div>
                         </div>))}
@@ -144,17 +144,29 @@ const Footer = () => {
                         <div>
                             <video width={"100%"}
                                 ref={videoOneRef}
-                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%BB%BA%E7%AD%91%E6%BC%AB%E6%B8%B8518.mp4?Expires=1685363062&OSSAccessKeyId=TMP.3KgiY2qSsocRuqt77LktSqzb1prjMty7X5azMapFyQeSM49tA5mBqpSBGCJ3djez1uwQSVLz3WmbqJdMErVPkss95qK5vm&Signature=QzTacWIMr2%2FpZkIdzi5CGpvNaxk%3D"
+                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%BB%BA%E7%AD%91%E6%BC%AB%E6%B8%B86.20.mp4"
                             ></video>
 
                         </div>
                     )}
                     {westSelect === 1 && (
                         <div>
-                            <video width={"100%"}
+                                  <div className='right-style' style={{top:'16%'}}>
+                {title.map((item, index) => (<div key={item.index}
+                    className='right-title'
+                    onClick={() => { setVideoIndex(index); switchScene(item.index) }}
+                    style={{
+                        backgroundImage: videoIndex === index ? `url(${unselected})` : `url(${select})`,
+                        color: videoIndex === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
+                    }}
+                >{item.title}
+                    <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
+                </div>))}
+            </div>
+            {videoIndex===10&&(<video width={"100%"}
                                 ref={videoTwoRef}
-                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%9B%AD%E6%9E%97%E6%BC%AB%E6%B8%B8.mp4?Expires=1685363016&OSSAccessKeyId=TMP.3KgiY2qSsocRuqt77LktSqzb1prjMty7X5azMapFyQeSM49tA5mBqpSBGCJ3djez1uwQSVLz3WmbqJdMErVPkss95qK5vm&Signature=BwAOZ6itkppajOWNXlExszSauac%3D"
-                            ></video>
+                                controls src="https://aliyunceshishiyong.oss-cn-hangzhou.aliyuncs.com/%E5%9B%AD%E6%9E%97%E6%BC%AB%E6%B8%B8.mp4"
+                            ></video>)}
 
                         </div>
                     )}
@@ -162,14 +174,14 @@ const Footer = () => {
 
                         {metroTitle.map((item, index) => (
                             <div
-                                onClick={() => { setWestSelect(index); }}
+                                onClick={() => { setWestSelect(index); if(index===1){setVideoIndex(10)}}}
                                 className="metro-section" key={item.index}
                                 style={{
                                     backgroundImage: westSelect === index ? `url(${unselected})` : `url(${select})`,
                                     color: westSelect === index ? '#fff' : 'rgba(255, 255, 255, 0.6)'
                                 }}>
                                 <div >{item.title}</div>
-                                <div style={{ marginTop: '-32px' }}><img style={{ width: 82 }} src={fontLine} /></div>
+                                <div style={{ marginTop: '-32px' }}>< img style={{ width: 82 }} src={fontLine} /></div>
 
                             </div>))}
 
