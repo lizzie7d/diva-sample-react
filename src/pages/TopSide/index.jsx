@@ -7,9 +7,7 @@ import unselected from '../../assets/asset/right-unselected.png';
 import fontLine from '../../assets/asset/font-line.png';
 import logo from '../../assets/asset/logo.png';
 import closeDetail from '../../assets/asset/closeIcon.png';
-import RailwayVideo from '../railwayVideo';
-import { Modal } from 'antd';
-import { Player } from 'video-react';
+
 
 const TopSide = () => {
     const [visible, setVisible] = useState(false);

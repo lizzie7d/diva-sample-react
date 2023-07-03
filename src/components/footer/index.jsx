@@ -23,8 +23,6 @@ import VideoPart from '../../pages/videoPart';
 import menu from '../../assets/asset/railway/menu.png'
 import MetroTitle from '../../pages/TopSide/metroTitle';
 import RoomTour from '../../pages/roomTour/roomTour';
-import logo from '../../assets/asset/logo.png';
-import WestBeauty from '../../pages/ChineBeauty';
 import fontLine from '../../assets/asset/font-line.png';
 import select from '../../assets/asset/right-select.png';
 import unselected from '../../assets/asset/right-unselected.png';
